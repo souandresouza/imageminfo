@@ -6,6 +6,7 @@ body {
     height: 100vh;
     margin: 0;
     background-color: #f4f4f9;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
 
 .container {
@@ -14,6 +15,8 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    width: 400px; /* Set a max width for better responsiveness */
 }
 
 input[type="file"] {
@@ -23,4 +26,32 @@ input[type="file"] {
 .properties {
     margin-top: 20px;
     font-size: 16px;
+}
+
+/* Theme Styles */
+body.light-theme {
+    background-color: #ffffff;
+    color: #000000; /* Black font color for light theme */
+}
+
+body.dark-theme {
+    background-color: #25282A;
+    color: #ffffff; /* White font color for dark theme */
+}
+
+body.dark-theme .container {
+    background-color: #25282A; /* Match the dark theme background */
+    color: #ffffff; /* Ensure text is white in dark theme */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adjust shadow for dark theme */
+}
+
+/* Image Preview Styles */
+.image-preview {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    display: none; /* Initially hidden */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow for better visibility */
 }
